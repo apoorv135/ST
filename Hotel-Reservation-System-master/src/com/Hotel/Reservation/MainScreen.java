@@ -1,20 +1,13 @@
 package com.Hotel.Reservation;
 
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Scanner;
 
 public class MainScreen implements Serializable{
-	
-	
 
 	public static void main(String args[])
 	{
-		int nod,type,bookingno,ld,d;
-	    char ch='y';
-	    double ff;
-	    String name;
+		char ch='y';
 	    
 	    Luxury[] ly = new Luxury[3];
 	    Deluxe[] dx = new Deluxe[8];
@@ -24,7 +17,7 @@ public class MainScreen implements Serializable{
 	    Transportation t[][][]=new Transportation[20][5][5];
 	    Book b[]=new Book[20];
 	    
-	    int i=0,j,k;
+	    int i,j,k;
 	    
 	    for(i=0;i<3;i++)
 	    {
@@ -67,21 +60,18 @@ public class MainScreen implements Serializable{
 	    
 	    
 	    String no;
-	    int ic=0,ily=0,ilr=0,itr1=0,itr2=0,isdx=0,idx=0;
+	    int ic=0,ily=0,itr1=0,itr2=0,isdx=0,idx=0;
 	    
 	    int flag1=0,flag2=0,flag3=0;
 
 	    while(true)
 	    {
 	    	
-//	    int is=0,js=0,ks=0;
-//	    int id=0,jd=0,kd=0;
+
 	    System.out.println("What do you want to do?");
 	    System.out.println("Book a room(b)");
 	    System.out.println("Avail a service(s)");
 	    System.out.println("Cancel a booked room(c)");
-	    //System.out.println("Check Out(o)");
-	    //System.out.println("Display customer info based on booking number(r)");
 	    System.out.println("Exit Menu(e)");
 	    
 	    Scanner in = new Scanner(System.in);
@@ -128,7 +118,6 @@ public class MainScreen implements Serializable{
 	    	c[ic].setInitialDetails(ic);
 	    	b[ic].BookNew(c[ic],ly[ily],dx[idx],sdx[isdx],t,l,ily,flag1,idx,flag2,isdx,flag3);
 	    	c[ic].setBookingNo(b[ic].getBookingNumber());
-	        //System.out.println(ily);
 	    	ic++;
 
 
@@ -213,18 +202,4 @@ public class MainScreen implements Serializable{
 	}
 	}
 	
-//	public void serializeBook(Book bc){
-//	 
-//		   try{
-//	 
-//			FileOutputStream fout = new FileOutputStream("e:\\address.ser");
-//			ObjectOutputStream oos = new ObjectOutputStream(fout);   
-//			oos.writeObject(bc);
-//			oos.close();
-//			System.out.println("Done");
-//	 
-//		   }catch(Exception ex){
-//			   ex.printStackTrace();
-//		   }
-//	   }
 }

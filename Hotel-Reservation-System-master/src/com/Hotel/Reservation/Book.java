@@ -23,9 +23,7 @@ public class Book implements Serializable{
 	
 	{
 		cust=c;
-	    Fare f=new Fare();
-	    int no,i;
-	    
+
     	t=tr;
     	l=lr;
     	
@@ -191,10 +189,5 @@ public class Book implements Serializable{
 	{
 		return cust.name;
 	}
-	
 
-//public String toString() {
-//	   return new StringBuffer(" Book No : ")
-//	   .append(this.bookno).toString();
-//}
 }
