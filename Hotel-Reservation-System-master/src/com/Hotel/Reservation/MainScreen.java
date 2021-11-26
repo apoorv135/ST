@@ -9,9 +9,9 @@ public class MainScreen implements Serializable{
 	{
 		char ch='y';
 	    
-	    Luxury[] ly = new Luxury[3];
-	    Deluxe[] dx = new Deluxe[8];
-	    SuperDeluxe[] sdx= new SuperDeluxe[10];
+	    Luxury[] ly = new Luxury[2];
+	    Deluxe[] dx = new Deluxe[2];
+	    SuperDeluxe[] sdx= new SuperDeluxe[2];
 	    Customer c[] = new Customer[20];
 	    Laundry l[][][]=new Laundry[20][5][5];
 	    Transportation t[][][]=new Transportation[20][5][5];
@@ -19,17 +19,17 @@ public class MainScreen implements Serializable{
 	    
 	    int i,j,k;
 	    
-	    for(i=0;i<3;i++)
+	    for(i=0;i<2;i++)
 	    {
 	    	ly[i]=new Luxury();
 			ly[i].set(500,false,false);
 	    }
-	    for(i=0;i<8;i++)
+	    for(i=0;i<2;i++)
 	    {
 	    	dx[i]=new Deluxe();
 			dx[i].set(1500,true,false);
 	    }
-	    for(i=0;i<10;i++)
+	    for(i=0;i<2;i++)
 	    {
 	    	sdx[i]=new SuperDeluxe();
 			sdx[i].set(2500,true,false);
@@ -80,7 +80,7 @@ public class MainScreen implements Serializable{
 	    if(ch=='b')
 	    {
 
-		    for(i=0;i<3;i++)
+		    for(i=0;i<2;i++)
 		    {
 		    	if(ly[i].getStatus()==false)
 		    	{
@@ -92,7 +92,7 @@ public class MainScreen implements Serializable{
 		    	flag1=0;
 		    }
 		    
-		    for(i=0;i<8;i++)
+		    for(i=0;i<2;i++)
 		    {
 		    	if(dx[i].getStatus()==false)
 		    	{
